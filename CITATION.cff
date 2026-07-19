@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this research framework, please cite it as below."
+authors:
+  - family-names: Ibrahim
+    given-names: Aboubakr
+title: "ICU Mortality Modeling Prototype"
+type: software
+version: 2.0.0
+date-released: 2026-07-19
+repository-code: "https://github.com/Aboubakr-Ibrahim/icu-mortality-modeling-prototype"
+license: MIT
+keywords:
+  - biomedical engineering
+  - intensive care
+  - mortality modeling
+  - MATLAB
+  - machine learning
+  - calibration
