@@ -1,0 +1,14 @@
+# Patient-level or derived data
+data/*.csv
+data/*.mat
+data/*.parquet
+
+# Generated results and models
+results/*.csv
+results/*.mat
+models/
+*.asv
+
+# Operating-system files
+.DS_Store
+Thumbs.db
