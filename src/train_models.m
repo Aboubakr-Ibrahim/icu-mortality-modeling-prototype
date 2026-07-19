@@ -1,0 +1,13 @@
+function models = train_models(XTrain, yTrain, cfg)
+%TRAIN_MODELS Fit logistic-regression and random-forest baselines.
+yTrain = double(yTrain(:));
+if numel(unique(yTrain)) < 2
+    error('ICUMortality:TrainingSingleClass','Training data need both classes.');
+end
+models.logistic = fitclinear(XTrain,yTrain, ...
+    'Learner','logistic','Regularization','ridge', ...
+    'Lambda',cfg.logisticLambda,'Solver','lbfgs','ClassNames',[0 1]);
+models.randomForest = TreeBagger(cfg.randomForestTrees,XTrain, ...
+    categorical(yTrain),'Method','classification', ...
+    'OOBPrediction','on','OOBPredictorImportance','on');
+end
